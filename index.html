@@ -6,68 +6,76 @@
   <title>Document</title>
 
   <style>
-    a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.header{display:grid;grid-template-columns:24px 400px 1fr 84px 24px;grid-template-areas:'left-space logo nav account right-space';align-items:center;height:64px;background-color:#ff4500}.header .logo{grid-area:logo;font-size:2rem;font-weight:700;text-decoration:none;color:#fff}.header .nav{grid-area:nav}.header .nav li{display:inline-block;margin-right:36px}.header .nav li a{font-size:1.25rem;text-decoration:none;color:#fff}.header .account{grid-area:account;font-size:1.5rem;text-decoration:none;color:#fff}.main{display:grid;grid-template-columns:280px 1fr;grid-template-areas:'aside content'}.main .aside{grid-area:aside;background-color:#eee;border-right:1px solid #d3d3d3;padding:36px}.main .aside .option-title{font-size:1.5em;font-weight:700; color: gray;}.main .aside ul{font-size:1.25em;margin:32px 8px;line-height:1.5em}.main .aside ul li{cursor:pointer}.main .content{grid-area:content;min-height:calc(100vh - 196px);background-color:#fafafa}.main .content .section.intro{padding:96px 80px;background-color:#fff;border-bottom:1px solid #d3d3d3;font-size:1.5rem;line-height:1.3em}.main .content .section.intro h1{font-size:1.5em;font-weight:700;margin-bottom:24px}.main .content .section.gallery{padding:16px}.main .content .section.gallery .article{display:inline-block;margin:8px;padding:24px;background-color:#fff;border:1px solid #ddd;border-radius:16px}.main .content .section.gallery .article .photo{width:480px;height:360px}.main .content .section.gallery .article .info{display:grid;grid-template-columns:64px 1fr;grid-template-rows:32px max-content;grid-template-areas:'like author' 'like desc';align-items:center;margin-top:16px;font-size:1.2rem}.main .content .section.gallery .article .info .like{grid-area:like;text-align:center;font-size:2.4em;color:#ff1493}.main .content .section.gallery .article .info .author{grid-area:author;font-weight:700}.main .content .section.gallery .article .info .desc{grid-area:desc;padding:4px 0;color:gray}#photo-1{background-image:url(photo.png)}.footer{background-color:#383838;padding:64px 0;font-size:1.2rem;text-align:center}.footer ul>li{display:inline-block;padding:0 48px}.footer ul>li:not(:last-child){border-right:1px solid gray}.footer ul>li a{color:#fff;text-decoration:none}
+    form { line-height: 1.5em; margin: 36px 24px; }
+    input, select { font-size: 0.9rem; }
+    button { font-size: 1rem; }
+    label { margin-right: 8px; vertical-align: top; }
   </style>
 </head>
 <body>
-  <header class="header">
-    <a class="logo" href="#">FastCampus Portfolio</a>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">사진 올리기</a></li>
-        <li><a href="#">내 정보</a></li>
-        <li><a href="#">팔로우 보기</a></li>
-        <li><a href="#">팔로워 보기</a></li>
-      </ul>
-    </nav>
-    <a class="account" href="#">Logout</a>
-  </header>
-  <main class="main">
-    <aside class="aside">
-      <div class="option-title">보기 옵션</div>
-      <ul>
-        <li>최신순 보기</li>
-        <li>좋아요 순 보기</li>
-      </ul>
-      <ul>
-        <li>내 사진 사진</li>
-        <li>좋아요 한 사진</li>
-        <li>팔로우 회원 사진</li>
-      </ul>
-    </aside>
-    <div class="content">
-      <section class="section intro">
-        <h1>패스트캠퍼스 포트폴리오입니다.</h1>
-        <p>
-          수많은 이용자들이 공유하는 멋진 사진들을 구경하고<br>
-          내가 직접 찍은 작품들을 공유하세요!
-        </p>
-      </section>
-      <section class="section gallery">
-        <article class="article">
-          <div id="photo-1" class="photo"></div>
-          <div class="info">
-            <div class="like">♥︎</div>
-            <div class="author">홍길동</div>
-            <div class="desc">
-              여행중 발견한 풍경을 사진에 담아보았습니다.
-            </div>
-          </div>
-        </article>
-      </section>
-    </div>
-  </main>
-  <footer class="footer">
-    <ul>
-      <li><a href="#">회사소개</a></li>
-      <li><a href="#">인재채용</a></li>
-      <li><a href="#">이용약관</a></li>
-      <li><a href="#">개인정보 보호</a></li>
-      <li><a href="#">고객센터</a></li>
-    </ul>
-  </footer>
-  
+
+  <label for="ip-name">이름</label>
+  <input id="ip-name" type="text" placeholder="이름을 입력하세요." maxlength="4"/>
+  <br>
+  <label for="ip-pw">비밀번호</label>
+  <input id="ip-pw" type="password" placeholder="비번과 숫자"/>
+  <br>
+  <br>
+  <label for="ip-age">나이</label>
+  <input id="ip-age" type="number"/>
+  <br>
+  <br>
+  <label for="ip-married">기혼</label>
+  <input id="ip-married" type="checkbox" checked/>
+  <br>  
+  <br>
+  <label>역할</label>  
+  <input id="input-dev" name="role" type="radio" checked/>
+  <label for="input-dev">개발자</label>
+  <input id="input-design" name="role" type="radio"/>
+  <label for="input-design">디자이너</label>
+  <input id="input-pm" name="role" type="radio"/>
+  <label for="input-pm">매니저</label>
+  <br>
+  <br>
+  <label for="ip-attatch">첨부</label>
+  <input id="ip-attatch" type="file" multiple/>
+  <br>
+  <br>
+  <label for="sel-dep">소속</label>
+  <select id="sel-dep">
+    <option value="adm">운영팀</option>
+    <option value="mkt">마케팅팀</option>
+    <option value="frt">프론트엔드팀</option>
+    <option value="bck">백엔드팀</option>
+    <option value="tst">테스트팀</option>
+    <option value="mnt">유지보수팀</option>
+  </select>
+  <br>
+  <br>
+  <label for="intro">소개</label>
+  <textarea id="intro" rows="5"></textarea>
+  <br>
+  <br>
+  <button type="button">제출</button>
+  <button type="button" disabled>취소</button>
+
 </body>
 </html>
 
- 
+<!-- 
+
+    <input id="input-dev" type="radio"/>
+    <label for="input-dev">개발자</label>
+    <input id="input-design" type="radio"/>
+    <label for="input-design">디자이너</label>
+    <input id="input-pm" type="radio"/>
+    <label for="input-pm">매니저</label>
+
+      <option value="adm">운영팀</option>
+      <option value="mkt">마케팅팀</option>
+      <option value="frt">프론트엔드팀</option>
+      <option value="bck">백엔드팀</option>
+      <option value="tst">테스트팀</option>
+      <option value="mnt">유지보수팀</option>
+-->
